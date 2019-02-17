@@ -1,0 +1,46 @@
+<div class="questionContainer">
+  <mat-card class="questionContent" *ngFor="let question of questions; let i = index">
+    <div class="questionTitle"><span class="questionNumber"><b>{{i + 1}}.</b></span>{{question.title}}</div>
+    <mat-divider></mat-divider>
+    <mat-list class="optionContainer" *ngIf="question.type !== 'dragNdrop'">
+      <mat-radio-group>
+      <mat-list-item class="optionContent" *ngFor="let option of question.option">
+        <mat-radio-button value={{option}} *ngIf="question.type === 'single'"></mat-radio-button>
+        <mat-checkbox class="optionCheckbox" *ngIf="question.type === 'multi'"></mat-checkbox>
+        <span class="optitonList">{{option}}</span>
+      </mat-list-item>
+    </mat-radio-group>
+    </mat-list>
+
+    <div class="dragContainer" *ngIf="question.type === 'dragNdrop'" cdkDropListGroup>
+      <div class="element-container">
+        <h4>Elements</h4>
+      
+        <div
+          cdkDropList
+          #elementsList="cdkDropList"
+          [cdkDropListData]="question.option.elements"
+          [cdkDropListConnectedTo]="[bucketsList]"
+          class="element-list"
+          (cdkDropListDropped)="drop($event)">
+          <div class="element-box" *ngFor="let element of question.option.elements" cdkDrag>{{element}}</div>
+        </div>
+        </div>
+        
+        <div class="element-container" *ngFor="let bucket of question.option.buckets">
+            <h4>{{bucket.bucketName | uppercase}}</h4>
+          
+            <div
+              cdkDropList
+              #bucketsList="cdkDropList"
+              [cdkDropListData]="bucket.bucketElements"
+              [cdkDropListConnectedTo]="[elementsList]"
+              class="element-list"
+              (cdkDropListDropped)="drop($event)">
+              <div class="element-box" *ngFor="let bucketElement of bucket.bucketElements" cdkDrag>{{bucketElement}}</div>
+            </div>
+          </div>
+    </div>
+  </mat-card>
+  <mat-card class="emptyQuestion" *ngIf="!listService.isEmpty()">No Questions Avilable..!</mat-card>
+</div> 

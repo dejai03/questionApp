@@ -1,0 +1,63 @@
+<mat-card class="listContainer">
+  <form class="editForm">
+    <div class="caption">Edit Question</div>
+    <mat-divider></mat-divider>
+    <div class="headContainer">
+      <mat-form-field class="questionTextArea">
+        <textarea matInput placeholder="Enter Question"  #inputQuestion></textarea>
+      </mat-form-field>
+      <input type="button" (click)="navigateToQuestion(inputQuestion)" value="SAVE" class="saveButton"/>
+    </div>
+    <div *ngIf="listService.questionType !== 'dragNdrop'">
+      <mat-form-field class="optionInput">
+        <input #inputRef matInput placeholder="Enter Options" />
+      </mat-form-field>
+        <input type="button" (click)="addOption(inputRef)" value="Add Option" class="optionButton" />
+        <div class="optionContainer">
+          <div
+          class="listOptions"
+          *ngFor="let option of options"
+          >
+          <div class="optionType">
+            <mat-checkbox class="optionCheckbox" *ngIf="listService.questionType === 'multi'"></mat-checkbox>
+            <mat-radio-button class="optionRadio" *ngIf="listService.questionType === 'single'"></mat-radio-button>
+          {{option}}
+          </div>
+         </div>
+        </div>
+    </div>
+    
+    <div *ngIf="listService.questionType === 'dragNdrop'">
+      <div class="elementContent">
+        <mat-form-field class="elementInput">
+          <input #elementinputRef matInput placeholder="Enter Elements" />
+        </mat-form-field>
+          <input type="button" (click)="addElement(elementinputRef)" value="Add element" class="optionButton" />
+          <div class="elementContainer">
+            <div
+            class="listOptions"
+            *ngFor="let element of elements"
+            >
+             {{element}}
+           </div>
+          </div>
+      </div>
+
+      <div class="elementContent">
+        <mat-form-field class="elementInput">
+          <input #bucketInputRef matInput placeholder="Enter Bucket Names" />
+        </mat-form-field>
+          <input type="button" (click)="addBucket(bucketInputRef)" value="Add Bucket" class="optionButton" />
+          <div class="elementContainer">
+            <div
+            class="listOptions"
+            *ngFor="let bucket of buckets"
+            >
+             {{bucket.bucketName}}
+           </div>
+          </div>
+      </div>
+      
+    </div>
+  </form>
+</mat-card>

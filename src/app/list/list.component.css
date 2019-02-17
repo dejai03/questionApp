@@ -1,0 +1,23 @@
+.listContainer{
+    background-color: #0d627a;
+    height: 100px;
+    width: 150px;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px;
+    margin-top: 20px;
+    color: white;
+    transition: all 0.3s linear;
+}
+.editIcon{
+    margin-left: 70%;
+    font-size: 30px;
+    cursor: pointer;
+    transition:all 0.4s linear;
+}
+.listContainer:hover{
+    background-color: #0d627ad3;
+}
+.editIcon:hover{
+    font-size: 20px;
+}

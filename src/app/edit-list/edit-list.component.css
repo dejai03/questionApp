@@ -1,0 +1,111 @@
+.listContainer{
+    height: 80vh;
+    width: 72vw;
+    margin: auto;
+    margin-top: 2vh;
+    text-align: left;
+}
+.editForm{
+    height: 73vh;
+    width: 68vw;
+    margin: auto;
+    margin-top: 3vh;
+    background: rgba(255, 255, 255, 0);
+}
+.questionTextArea{
+    width: 50vw;
+    margin: 1vh;
+}
+.saveButton{
+    height: 5vh;
+    width: 10vw;
+    margin: 20px;
+    color: white;
+    border: 0px;
+    float: right;
+    background: #20376bcc;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.optionButton{
+    height: 5vh;
+    width: 8vw;
+    margin: 1vh;
+    color: white;
+    border: 0px;
+    background: #cd5334c5;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.optionRadio{
+    margin-right: 10px;
+    margin-left: 7px;
+}
+.optionCheckbox{
+    margin-left: 10px;
+}
+.optionInput{
+    height: 5vh;
+    width: 40vw;
+    margin: 1vh;
+    font-size: 14px;
+}
+.optionContainer{
+    height: 46vh;
+    width: 40vw;
+    margin: 1vh;
+    border: 1px solid rgba(204, 204, 204, 0.459);
+    font-size: 13px;
+    overflow: hidden;
+}
+.listOptions{
+    height: 5vh;
+    width: 100%;
+    padding-top: 10px;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.459);
+    background: rgba(188, 188, 212, 0.062);
+}
+.headContainer{
+    width: 100%;
+    margin-top: 4vh;
+}
+.optionCheckbox{
+    margin-right: 13px;
+}
+.elementContainer{
+    height: 46vh;
+    width: 20vw;
+    margin: 1vh;
+    border: 1px solid rgba(204, 204, 204, 0.459);
+    font-size: 13px;
+    overflow: hidden;
+}
+.bucketContainer{
+    height: 46vh;
+    width: 20vw;
+    margin: 1vh;
+    border: 1px solid rgba(204, 204, 204, 0.459);
+    font-size: 13px;
+    overflow: hidden;
+}
+.elementInput{
+    height: 5vh;
+    width: 20vw;
+    margin: 0px;
+    font-size: 14px;
+}
+.elementContent{
+    float: left;
+    width: 31vw;
+}
+.caption{
+    margin-bottom: 2vh;
+}
+.saveButton:hover{
+    background: #20376b;
+    font-size: 14px;
+}
+.optionButton:hover{
+    font-size: 14px;
+    background: #cd5334fd;
+}

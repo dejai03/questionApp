@@ -1,0 +1,37 @@
+<app-header></app-header>
+<notifier-container></notifier-container>
+<mat-drawer-container class="side-menu-container">
+    <mat-drawer class="side-menu" mode="side" opened>
+        <div
+            *ngFor = "let menu of menus"
+            (click) = "navigateToList(menu.link)"
+            class="menuContent">
+            <div class="menuIcon">
+                <i class="material-icons">{{menu.icon}}</i>
+            </div>
+            <div class="menuCaption">
+                {{menu.name}}
+            </div>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <mat-drawer-container class="side-content-container">
+            <mat-drawer class="side-content" mode="side" [opened] = 'listService.isOpened'>
+                <div 
+                    class="choiceContainer"
+                    *ngFor="let menuItem of types"
+                    (click)="navigateToEdit(menuItem.type)">
+                    <div class="choiceIcon">
+                        <i class="material-icons">{{menuItem.icon}}</i>{{menuItem.short}}
+                    </div>
+                    <div class="choiceCaption">
+                        {{menuItem.description}}
+                    </div>
+                </div>
+            </mat-drawer>
+            <mat-drawer-content>
+                <router-outlet></router-outlet>
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </mat-drawer-content>
+</mat-drawer-container>

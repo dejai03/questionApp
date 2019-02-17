@@ -1,0 +1,81 @@
+.side-menu-container{
+    height: 90vh;
+    width: 100vw;
+    text-align: center;
+    background-color: rgba(104, 99, 85, 0.103);
+}
+
+.side-menu{
+    height: 92vh;
+    border-right: solid 2px #0b5063;
+    width: 6vw;
+    background-color:#0d627a;
+}
+
+.menuContent{
+    height: 60px;
+    /* border-bottom: solid 2px rgba(19, 18, 18, 0.363); */
+    border-bottom: solid 2px #0b5063;
+    cursor: pointer;
+    border-left: 2px solid rgba(140, 135, 161, 0.144);
+    color: white;
+    background: rgba(140, 135, 161, 0.144);
+    transition: all 0.3s linear;
+}
+
+.side-content-container{
+    height: 88vh;
+    width: 92vw;
+    background-color: inherit;
+}
+
+.side-content{
+    height: 100vh;
+    width: 15vw;
+    background-color:#f3a333;
+    color: white;
+    box-sizing: border-box;
+    box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+.choiceContainer{
+    height: 70px;
+    margin: auto;
+    cursor: pointer;
+    padding-top: 10px;
+    border-bottom: 2px solid rgba(226, 219, 219, 0.274);
+    border-top: 2px solid rgba(199, 186, 186, 0.164);
+    background-color: rgba(199, 186, 186, 0.164);
+    transition: all 0.3s linear;
+    color: white;
+}
+.side-content:first-child{
+    border-top: 1px solid rgba(0, 0, 0, 0.527);
+    margin-top: 20px;
+}
+.menuCaption{
+    font-size: 12px;
+}
+.choiceCaption{
+    font-size: 11px;
+    margin-top: 10px;
+}
+.material-icons{
+    padding: 7px;
+    font-size: 20px;
+    transition: all 0.3s linear;
+}
+.menuContent:hover{
+    background: #cd4545;
+    border-left: 2px solid #f3a333;
+}
+.choiceContainer:hover{
+    background-color: #cd4545;
+    border-bottom: 2px solid #96282870;
+    border-top: 2px solid #96282870;
+}
+.activeMenu{
+    background: rgba(255, 0, 0, 0.404);
+    border-left: 2px solid rgb(255, 0, 0);
+}

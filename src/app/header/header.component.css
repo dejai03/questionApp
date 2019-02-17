@@ -1,0 +1,50 @@
+.headerContainer{
+    height: 7vh;
+    width: 100vw;
+    background-color: #0d627a;
+    color: white;
+    border-bottom: 1px solid #0a5266;
+    box-sizing: border-box;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 5px 8px 1px rgba(0, 0, 0, 0.14),
+                0 3px 10px 2px rgba(0, 0, 0, 0.12);
+}
+
+.logoContainer{
+    height: 7vh;
+    width: 8vw;
+    margin-left: 15px;
+    float: left;
+    /* background-color: rgba(3, 41, 56, 0.404); */
+}
+
+.logo{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.listUl{
+    height: inherit;
+    margin-right: 10vh;
+    float: right;
+}
+.listLi{
+    display: inline;
+    list-style: none;
+    margin-left: 5px;
+}
+.profile{
+    border-radius: 50%;
+    background: rgba(3, 41, 56, 0.404);
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    color: white;
+    margin-top: 5px;
+    font-size: 23px;
+    border: 0px;
+    transition: all 0.4s linear;
+}
+.profile:hover{
+    background: rgb(1, 21, 29);
+}

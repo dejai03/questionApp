@@ -1,0 +1,16 @@
+<header class="headerContainer">
+    <div class="logoContainer">
+        <div class="logo">LOGO</div>
+    </div>
+    <ul class="listUl">
+        <li class="listLi">
+            {{userName}}
+        </li>
+        <li class="listLi">
+            <button class="profile" mat-button [matMenuTriggerFor]="menu">{{userName | slice:0:1}}</button>
+            <mat-menu #menu="matMenu">
+            <button mat-menu-item>Logout</button>
+            </mat-menu>
+        </li>
+    </ul>
+</header>
